@@ -2,23 +2,6 @@ name: Build
 
 on:
   workflow_dispatch:
-    inputs:
-      build_type:
-        description: 'Build type (debug = Pixeldrain only, test = + GitHub release, release = + OTA XML)'
-        type: choice
-        options:
-          - debug
-          - test
-          - release
-        default: debug
-  pull_request:
-  push:
-    branches:
-      - 'sixteen'
-
-concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
 
 jobs:
   build:
