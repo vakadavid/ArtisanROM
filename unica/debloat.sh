@@ -65,19 +65,6 @@ SYSTEM_DEBLOAT+="
 system/app/MAPSAgent
 "
 
-# HwModuleTest
-SYSTEM_DEBLOAT+="
-system/app/Cameralyzer
-system/app/FactoryAirCommandManager
-system/app/FactoryCameraFB
-system/app/WlanTest
-system/etc/default-permissions/default-permissions-com.sec.factory.cameralyzer.xml
-system/etc/permissions/privapp-permissions-com.samsung.android.providers.factory.xml
-system/etc/permissions/privapp-permissions-com.sec.facatfunction.xml
-system/priv-app/FacAtFunction
-system/priv-app/FactoryTestProvider
-"
-
 # AppUpdateCenter
 SYSTEM_DEBLOAT+="
 system/etc/permissions/privapp-permissions-com.samsung.android.app.updatecenter.xml
@@ -154,41 +141,6 @@ SYSTEM_DEBLOAT+="
 system/app/Notes40
 "
 
-# Bixby
-SYSTEM_DEBLOAT+="
-system/priv-app/Bixby
-system/app/BixbyWakeup
-"
-
-# LED Cover Service
-[ "$(GET_FLOATING_FEATURE_CONFIG "SEC_FLOATING_FEATURE_FRAMEWORK_CONFIG_NFC_LED_COVER_LEVEL")" -lt "30" ] && SYSTEM_DEBLOAT+="
-system/etc/permissions/privapp-permissions-com.sec.android.cover.ledcover.xml
-system/priv-app/LedCoverService
-"
-
-# Spen
-SYSTEM_DEBLOAT+="
-system/app/AirGlance
-system/app/LiveDrawing
-system/etc/default-permissions/default-permissions-com.samsung.android.service.aircommand.xml
-system/etc/permissions/privapp-permissions-com.samsung.android.app.readingglass.xml
-system/etc/permissions/privapp-permissions-com.samsung.android.service.aircommand.xml
-system/etc/permissions/privapp-permissions-com.samsung.android.service.airviewdictionary.xml
-system/etc/public.libraries-smps.samsung.txt
-system/etc/sysconfig/airviewdictionaryservice.xml
-system/lib64/libsmpsft.smps.samsung.so
-system/media/audio/pensounds
-system/priv-app/AirCommand
-system/priv-app/AirReadingGlass
-system/priv-app/SmartEye
-"
-
-# Link to Windows
-# Replace full apk with stub apk to save space
-SYSTEM_DEBLOAT+="
-system/priv-app/YourPhone_P1_5
-"
-
 # Live Transcribe
 SYSTEM_DEBLOAT+="
 system/app/LiveTranscribe
@@ -230,17 +182,6 @@ system/priv-app/SOAgent76
 "
 
 SET_FLOATING_FEATURE_CONFIG "SEC_FLOATING_FEATURE_CONTEXTSERVICE_ENABLE_SURVEY_MODE" --delete
-
-# Samsung AR Emoji
-SYSTEM_DEBLOAT+="
-system/etc/default-permissions/default-permissions-com.sec.android.mimage.avatarstickers.xml
-system/etc/permissions/privapp-permissions-com.samsung.android.aremojieditor.xml
-system/etc/permissions/privapp-permissions-com.sec.android.mimage.avatarstickers.xml
-system/etc/permissions/signature-permissions-com.sec.android.mimage.avatarstickers.xml
-system/priv-app/AREmojiEditor
-system/priv-app/AvatarEmojiSticker
-system/priv-app/StickerFaceARAvatar
-"
 
 # Samsung Calendar
 SYSTEM_DEBLOAT+="
