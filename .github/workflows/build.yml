@@ -10,11 +10,7 @@ on:
           - debug
           - test
           - release
-        default: debug
-  pull_request:
-  push:
-    branches:
-      - 'sixteen'
+        default: release
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
